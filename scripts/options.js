@@ -1,4 +1,4 @@
-const saveOptions = () => {
+ const saveOptions = () => {
     const format = document.getElementById('format').value;
 
     chrome.storage.sync.set(
@@ -12,7 +12,7 @@ const saveOptions = () => {
 const restoreOptions = () => {
     console.log("Restoring format selection")
     chrome.storage.sync.get(
-        {filterFormat: "modern"},
+        {filterFormat: "edison"},
         (items) => {
             document.getElementById('format').value = items.filterFormat;
         }
